@@ -47,6 +47,8 @@ Este projeto está licenciado sob a [MIT License](https://github.com/jvMassimino
 
 ## Prints
 
-![image](https://github.com/user-attachments/assets/0d509315-ac91-4e20-8327-2bd6a4f29410)
+**Visão geral:**
+![image](https://github.com/user-attachments/assets/65254098-983c-4acb-ab6a-a56169a13442)
 
+**Detalhes:**
 ![image](https://github.com/user-attachments/assets/3dfc6dba-54fd-43af-95a4-e647191ac80f)
