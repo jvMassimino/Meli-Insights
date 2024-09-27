@@ -24,18 +24,12 @@ Frameworks e Bibliotecas:
 
 **Como Executar o Projeto**
 
-1º Clone o repositório para sua máquina local:
+Clone o repositório para sua máquina local:
 
-    git clone https://github.com/seu-usuario/Meli-Insights.git
+    git clone https://github.com/jvMassimino/Meli-Insights.git
 
-2º Navegue até o diretório do projeto:
-
-
-    cd Meli-Insights
 
 Abra o arquivo index.html em qualquer navegador moderno:
-
-    open index.html
 
 A aplicação estará pronta para uso localmente.
 
@@ -56,5 +50,3 @@ Este projeto está licenciado sob a [MIT License](https://github.com/jvMassimino
 ![image](https://github.com/user-attachments/assets/0d509315-ac91-4e20-8327-2bd6a4f29410)
 
 ![image](https://github.com/user-attachments/assets/3dfc6dba-54fd-43af-95a4-e647191ac80f)
-
-
