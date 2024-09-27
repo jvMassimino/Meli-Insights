@@ -1,0 +1,405 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.noselect {
+    user-select: none; /* Para navegadores modernos */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para IE e Edge */
+}
+
+
+:root {
+    --color-primary: #d0011b;
+    --color-secondary: #ffd657;
+    --color-accent: #fa2643;
+    --background: #e9ecef;
+    --container: white;
+    --text-dark: #343a40;
+    --text-light: rgb(89, 92, 95);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-dark);
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container-pesquisa {
+    position: fixed;
+    top: 5px; 
+    left: 20px; 
+    display: none;
+    z-index: 1000;
+    background-color: var(--container); 
+    padding: 8px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 250px; 
+    width: auto; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    display: flex; /* Use flexbox para alinhar os itens */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.container-pesquisa.on {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#idInput {
+    padding: 5px 8px;
+    font-size: 0.9em; 
+    border: 2px solid var(--color-primary);
+    border-radius: 4px; 
+    margin-right: 5px;
+    flex: 1; 
+    margin-right: 5px;
+    min-width: 0; 
+}
+
+#idInput:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 6px rgba(179, 0, 0, 0.5);
+}
+
+#filtrarBtn {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 0.9em; 
+    background-color: var(--color-primary);
+    color: var(--container);
+    border: none;
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+#filtrarBtn:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-1px); 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#filtrarBtn:active {
+    transform: translateY(1px);
+}
+
+.dashboard {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background: var(--container);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 7px 7px 0 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-list {
+    margin-bottom: 30px;
+    height: 800px;
+    overflow-y: scroll;
+}
+
+.product-details {
+    padding: 0;
+    list-style: none;
+}
+
+.produtName {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.product-details li {
+    border: 1px solid #ced4da;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-details li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header-produto {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produtName {
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+button {
+    margin-top: 10px;
+    padding: 3px 7px;
+    background-color: var(--color-primary);
+    color: var(--container);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: 1px var(--color-primary) solid;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 7px;
+}
+
+.product-details button {
+    margin-top: 10px;
+    padding: 8px 12px;
+}
+
+.product-details button:hover {
+    background-color: var(--color-secondary);
+}
+
+.detalhes {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #ced4da;
+    border-radius: 7px;
+}
+
+.detalhes img {
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.detalhes img:hover {
+    transform: scale(1.05);
+}
+
+.dashboard-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard-footer a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dashboard-footer a:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
+span.good {
+    background-image: url("../img/like.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+span.bad {
+    background-image: url("../img/unlike.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+button.btnExibir {
+    background: none;
+    color: var(--color-primary);
+    padding: 5px;
+    font-size: 0.9rem;
+    height: max-content;
+}
+
+button.btnExibir:hover {
+    background: none;
+    color: var(--color-secondary);
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: var(--color-primary);
+    color: var(--background);
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.tag:hover {
+    background-color: var(--color-accent);
+}
+
+.pId {
+    cursor: pointer;
+}
+
+.pId:hover {
+    color: var(--text-light);
+}
+
+hr {
+    flex: 1;
+    height: 1px; 
+    background-color: black; 
+    border: none; 
+}
+
+span.isCatalog {
+    color: var(--text-light);
+    padding: 0 0 0 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.line {
+    position: relative;
+    margin-bottom: 30px;
+    width: 220px;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to left, #6ECE34, #E6A749, #E5A749, #F71C1C);
+}
+
+.line > .point {
+    position: absolute;
+    top: -3px;
+    left: 21%;
+    width: 8px;
+    height: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: #FFF;
+}
+
+.pontuacao span{
+    text-align: center;
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+
+hr.red{
+    background-color: var(--color-primary)
+}
+
+.etiqueta {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 56px;
+    max-width: 100%;
+    text-align: center;
+    height: 16px;
+    margin-bottom: 0;
+    padding: 0 8px;
+    overflow: hidden;
+    border-radius: 4px;
+    color: var(--text-dark);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.etiqueta:hover {
+    background-color: var(--label-background-color-hovered);
+    border-bottom: 1px #686868 solid;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.etiqueta.classico{
+    color: #E5A749;
+    border-bottom: 1px #E5A749 solid;
+}
+
+.etiqueta.premium{
+    color: #FFC107;
+    border-bottom: 1px #FFC107 solid;
+}
+
+.etiqueta.novo{
+    color: #28fa55;
+    border-bottom: 1px #28fa55 solid;
+}
+
+.etiqueta.tags{
+    background-color: var(--label-background-color-hovered);
+    border-bottom: 1px #686868 solid;
+}
+
+.liHeaderTop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.liHederContent {
+    padding: 0px 5px 0 5px;
+}
+
+li.anuncio {
+    cursor: default;
+}

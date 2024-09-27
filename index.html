@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Mercado Livre</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <noscript>JavaScript está desabilitado no seu navegador. Por favor, habilite-o para exibir essa página</noscript>
+    <div class="app">
+        <h1 style="padding: 10px;">Lista de Arvore Mercado Livre</h1>
+        <div class="container-pesquisa">
+            <input type="text" id="idInput" placeholder="Buscar...">
+            <button id="filtrarBtn">Filtrar</button>  
+        </div>
+        <div class="app-content">
+            <div class="dashboard">
+                <header class="dashboard-header">
+                    <h1>Filtrar por tags</h1>
+                    <div class="tags-container"></div>
+                    <hr class="red">
+                    <button id="limparFiltroBtn">Limpar</button>
+                    <button id="recolAllBtn">Recolher Todos</button>
+                    <button id="expandAllBtn">Expandir Todos</button>
+                </header>
+                <section class="product-list">
+                    <ul class="product-details"></ul>
+                </section>
+                <footer class="dashboard-footer">
+                    <b>&copy;2024<a href="http://github.com/jvmassimino" target="_blank" rel="noopener noreferrer">jvmassimino</a> | <a href="https://api.mercadolibre.com/items/#options" target="_blank">Mercado Livre API</a> </b>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
