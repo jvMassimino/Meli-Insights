@@ -2,8 +2,8 @@
 
 **ATENÇÃO:** Nenhum repositório, ferramenta ou proprietário do repositório é afiliado, patrocinado ou autorizado pelo **Mercado Livre** ou seus afiliados.
 
-Meli-Insights é uma aplicação web voltada para a consulta de produtos da plataforma Mercado Livre. Através de uma interface moderna e intuitiva, permite a busca, filtragem e visualização detalhada de produtos, utilizando dados em tempo real fornecidos pela API do Mercado Livre. O objetivo principal do projeto é facilitar a visualização e análise de produtos, proporcionando insights claros e acessíveis.
-
+Meli-Insights é uma aplicação web voltada para a consulta de produtos da plataforma Mercado Livre. Através de uma interface moderna e intuitiva, permite a busca, filtragem e visualização detalhada de produtos, utilizando dados em tempo real fornecidos pela API PUBLICA do Mercado Livre.
+O objetivo principal do projeto é facilitar a visualização e análise de produtos, proporcionando insights claros e acessíveis.
 
 ## Funcionalidades
 
@@ -29,23 +29,36 @@ Clone o repositório para sua máquina local:
     git clone https://github.com/jvMassimino/Meli-Insights.git
 
 
-Abra o arquivo index.html em qualquer navegador moderno:
+Abra o arquivo assets > js > main.js
+
+Altere a constante produtos para a lista de anuncios que seja e abra o arquivo index.html em qualquer navegador moderno.
+
+Exemplo:
+
+    const produtos = [
+        { MLB: 'MLB5028365426' },
+        { MLB: 'MLB5028417312' },
+        { MLB: 'MLB1957162209' },
+    ];
+
 
 A aplicação estará pronta para uso localmente.
 
- 
- 
+
+#### Api
+[Documentação](http://developers.mercadolibre.com)
+
 #### Requisitos
 Este projeto é 100% baseado em frontend, portanto, não há necessidade de instalar dependências ou rodar servidores. Basta um navegador atualizado.
 
-## Contribuição
+#### Contribuição
 
 Sinta-se à vontade para abrir um issue caso encontre bugs ou tenha sugestões de melhoria. Pull requests também são bem-vindos!
 
-## Licença
+#### Licença
 Este projeto está licenciado sob a [MIT License](https://github.com/jvMassimino/Bling-Extension/blob/main/LICENSE)
 
-## Prints
+#### Prints
 
 **Visão geral:**
 ![image](https://github.com/user-attachments/assets/65254098-983c-4acb-ab6a-a56169a13442)
