@@ -31,7 +31,7 @@ Clone o repositório para sua máquina local:
 
 Abra o arquivo assets > js > main.js
 
-Altere a constante produtos para a lista de anuncios que seja e abra o arquivo index.html em qualquer navegador moderno.
+Altere a constante produtos para a lista de anuncios que deseja e abra o arquivo index.html em qualquer navegador moderno.
 
 Exemplo:
 
